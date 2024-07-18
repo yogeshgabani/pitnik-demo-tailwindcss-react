@@ -1,0 +1,164 @@
+.profile-img:hover .camera-icon{
+    opacity: 1;
+    transform: scale(1);
+}
+.arrow-down::after {
+    position: absolute;
+    content: "";
+    border-bottom: 10px solid #fa6342;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    bottom: -10px;
+    left: 50%;
+    transform: translate(-50%);
+}
+.weather-img {
+    background-image: url('../../Assets//Images/weather.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 350px;
+}
+.weather-img::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #3ca9fc;
+    opacity: 0.75;
+    width: 100%;
+    height: 100%;
+}
+.icon {
+    /* width: 12em; */
+    height: 10em;
+    transform: scale(.8);
+    transform-origin: 50% 50%;
+    transition: transform 200ms ease-out;
+    position: relative;
+    display: inline-block;
+    z-index: 1;
+    top: 50%;
+    left: 50%;
+}
+.cloud {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 3.6875em;
+    height: 3.6875em;
+    margin: -1.84375em;
+    background: #fff;
+    border-radius: 50%;
+    box-shadow: -2.1875em .6875em 0 -2.6875em, 2.0625em .9375em 0 -1.9375em, 0 0 0 .375em #fff, -2.1875em .6875em 0 -.3125em #fff, 2.0625em .9375em 0 -.5625em #fff;
+}
+.sun {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 2.5em;
+    height: 2.5em;
+    margin: -1.25em;
+    background: 0 0;
+    border-radius: 50%;
+    box-shadow: 0 0 0 .375em #fff;
+    animation: spin 12s infinite linear;
+}
+.cloud+.sun {
+    margin: -2em 1em;
+}
+.rays {
+    position: absolute;
+    top: -2em;
+    left: 50%;
+    display: block;
+    width: .375em;
+    height: 1.125em;
+    margin-left: -.1875em;
+    background: #fff;
+    border-radius: .25em;
+    box-shadow: 0 5.375em #fff;
+}
+.rays:before {
+    transform: rotate(120deg) !important;
+}
+.rays:after, .rays:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: .375em;
+    height: 1.125em;
+    transform: rotate(60deg);
+    transform-origin: 50% 3.25em;
+    background: #fff;
+    border-radius: .25em;
+    box-shadow: 0 5.375em #fff;
+}
+.rain {
+    position: absolute;
+    z-index: 2;
+    top: 50%;
+    left: 50%;
+    width: 3.75em;
+    height: 3.75em;
+    margin: .375em 0 0 -2em;
+    background: 0 0;
+}
+.rain:after {
+    content: '';
+    position: absolute;
+    z-index: 2;
+    top: 50%;
+    left: 50%;
+    width: 1.125em;
+    height: 1.125em;
+    margin: -1em 0 0 -.25em;
+    background: #0cf;
+    border-radius: 100% 0 60% 50% / 60% 0 100% 50%;
+    box-shadow: .625em .875em 0 -.125em rgba(255, 255, 255, .2), -.875em 1.125em 0 -.125em rgba(255, 255, 255, .2), -1.375em -.125em 0 rgba(255, 255, 255, .2);
+    transform: rotate(-28deg);
+    animation: rain 3s linear infinite;
+}
+.slick-prev:before, .slick-next:before {
+    color: #fa6342 !important;
+}
+.slick-next {
+    right: 0 !important;
+}
+.slick-prev {
+    left: 0px !important;
+    z-index: 1;
+}
+.banner-bg {
+    background-image: url('../../Assets//Images//baner-widgetbg.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+}
+@keyframes spin {
+    100% {
+        transform: rotate(360deg);
+    }
+    
+}
+@keyframes rain {
+0% {
+    background: #0cf;
+    box-shadow: .625em .875em 0 -.125em rgba(255, 255, 255, .2), -.875em 1.125em 0 -.125em rgba(255, 255, 255, .2), -1.375em -.125em 0 #0cf;
+}
+
+25% {
+    box-shadow: .625em .875em 0 -.125em rgba(255, 255, 255, .2), -.875em 1.125em 0 -.125em #0cf, -1.375em -.125em 0 rgba(255, 255, 255, .2);
+}
+50% {
+    background: rgba(255, 255, 255, .3);
+    box-shadow: .625em .875em 0 -.125em #0cf, -.875em 1.125em 0 -.125em rgba(255, 255, 255, .2), -1.375em -.125em 0 rgba(255, 255, 255, .2);
+}
+100% {
+    box-shadow: .625em .875em 0 -.125em rgba(255, 255, 255, .2), -.875em 1.125em 0 -.125em rgba(255, 255, 255, .2), -1.375em -.125em 0 #0cf;
+}
+}
