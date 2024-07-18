@@ -60,9 +60,9 @@ export default function Header() {
             <div className=' hidden lg:block'>
                 <div className='bg-white h-[55px] px-4 py-2 flex items-center fixed w-full z-[14] ' style={{ boxShadow: '0px 0px 5px rgba(0,0,0,0.2)' }}>
                     <div className='w-[12%] me-3'>
-                        <a className='max-w-24' href="#">
+                       <Link to ='/'> <a className='max-w-24' href="#">
                             <img className='max-w-full' src={logoimg} alt="" />
-                        </a>
+                        </a></Link>
                     </div>
                     <div className='flex items-center w-[60%]'>
                         <div className='relative w-[32%]'>
