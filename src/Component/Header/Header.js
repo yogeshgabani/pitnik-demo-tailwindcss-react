@@ -22,6 +22,7 @@ import { Dialog, Transition } from '@headlessui/react';
 import { MdOutlineEmail } from 'react-icons/md';
 import { IoMdMenu } from 'react-icons/io';
 import { PiSlidersBold } from 'react-icons/pi';
+import { Link } from 'react-router-dom';
 
 
 export default function Header() {
@@ -74,7 +75,7 @@ export default function Header() {
                         <div className=''>
                             <ul className='flex'>
                                 <li className='group inline-block bg-[#0066ff] p-2 rounded-lg mx-1 transition-all duration-200 ease-linear delay-0 hover:bg-[#0000001a] cursor-pointer '>
-                                    <CiFaceSmile className=' text-white text-[18px] group-hover:text-black' />
+                                    <Link to='timeline'><CiFaceSmile className=' text-white text-[18px] group-hover:text-black' /></Link>
                                 </li>
                                 <li className='group inline-block bg-[#0000ff] p-2 rounded-lg mx-1 transition-all duration-200 ease-linear delay-0 hover:bg-[#0000001a] cursor-pointer'>
                                     <CiHeart className=' text-white text-[18px] group-hover:text-black' />
